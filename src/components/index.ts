@@ -1,0 +1,13 @@
+export { default as LandingPage } from "@/components/LandingPage";
+
+export * from "@/components/backgrounds";
+export * from "@/components/buttons";
+export * from "@/components/cards";
+export * from "@/components/effects";
+export * from "@/components/forms";
+export * from "@/components/icons";
+export * from "@/components/layout";
+export * from "@/components/motion";
+export * from "@/components/navigation";
+export * from "@/components/sections";
+export * from "@/components/typography";
