@@ -23,12 +23,11 @@ export const photo = {
   alt: "The Nuptial Diaries studio at work",
 };
 
-// A founder statement, not a testimonial — deliberately unnamed rather
-// than attributed to an invented person.
+// A founder statement, not a testimonial.
 export const founderNote = {
   quote:
     "We built the software we always wished existed. After years of managing weddings, clients, payments and deliveries manually, we decided to build the operating system our studio deserved. Now we're making it available to every wedding studio.",
-  attribution: "— The Founder, Nuptial Diaries",
+  attribution: "Bharath V, Nuptial Diaries, The Founder",
 };
 
 export const timelineSteps = [
