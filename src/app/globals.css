@@ -28,25 +28,6 @@ body {
   }
 }
 
-@keyframes mobile-card {
-  0% {
-    opacity: 0;
-    transform: translateY(14px) scale(0.98);
-  }
-  15% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  85% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-14px) scale(0.98);
-  }
-}
-
 .float-slow {
   animation: float 8s ease-in-out infinite;
 }
@@ -59,6 +40,113 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
-.animate-mobile-card {
-  animation: mobile-card 2s ease-in-out both;
+/* Used by AutoCyclingCard (Scene 1's MobileStoryCards and the Scenes 2-5
+   mobile fallbacks) for both timer-driven auto-advance and swipes — the
+   two differ only in direction-derivation and speed, both via a
+   directional slide. Outgoing and incoming card content are both mounted
+   at once and animate concurrently, rather than a single element
+   unmounting/remounting through an opacity: 0 boundary, which produced a
+   visible blank frame at every cycle. translateX is 100% of the card's own
+   width so it slides fully past the card's overflow-hidden edge rather
+   than a partial nudge. Duration comes from the --slide-duration custom
+   property, set inline by AutoCyclingCard.tsx to AUTO_ADVANCE_TRANSITION_MS
+   or SWIPE_TRANSITION_MS — the 180ms fallback below is only used if that
+   property is somehow missing. */
+@keyframes card-slide-out-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes card-slide-out-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes card-slide-in-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes card-slide-in-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-card-slide-out-left {
+  animation: card-slide-out-left var(--slide-duration, 180ms) ease-out both;
+}
+
+.animate-card-slide-out-right {
+  animation: card-slide-out-right var(--slide-duration, 180ms) ease-out both;
+}
+
+.animate-card-slide-in-from-right {
+  animation: card-slide-in-from-right var(--slide-duration, 180ms) ease-out both;
+}
+
+.animate-card-slide-in-from-left {
+  animation: card-slide-in-from-left var(--slide-duration, 180ms) ease-out both;
+}
+
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.015);
+  }
+}
+
+.breathe-slow {
+  animation: breathe 6s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.glow-pulse-slow {
+  animation: glow-pulse 3s ease-in-out infinite;
 }

@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div className="relative z-20 flex min-h-screen items-center justify-center px-6 pt-28">
       <div className="mx-auto max-w-[900px] text-center">
-        <div className="md:hidden">
+        <div className="xl:hidden">
           <MobileStoryCards />
         </div>
 
