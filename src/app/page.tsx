@@ -10,6 +10,7 @@ import Scene05ProductPreview from "@/scenes/Scene05_ProductPreview";
 import Section07BuiltInsideStudio from "@/sections/Section07_BuiltInsideStudio";
 import Section08Pricing from "@/sections/Section08_Pricing";
 import Section09FinalCTA from "@/sections/Section09_FinalCTA";
+import Section10Footer from "@/sections/Section10_Footer";
 import Scene02MobileFallback from "@/scenes/Scene02_FlatlayDesk/MobileFallback";
 import Scene03MobileFallback from "@/scenes/Scene03_OSReveal/MobileFallback";
 import Scene04MobileFallback from "@/scenes/Scene04_Reveal/MobileFallback";
@@ -316,6 +317,7 @@ export default function Home() {
         <Section07BuiltInsideStudio />
         <Section08Pricing />
         <Section09FinalCTA />
+        <Section10Footer />
       </>
     )}
     </>
