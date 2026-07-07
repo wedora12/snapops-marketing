@@ -19,16 +19,27 @@ export default function Header() {
           </div>
   
           <nav className="hidden items-center gap-10 text-[15px] font-medium text-[#667085] md:flex">
-            <a href="#problem" className="hover:text-[#1D3539]">Problem</a>
+            <a href="#problem" className="hover:text-[#1D3539]">Why SnapOps</a>
             <a href="#product" className="hover:text-[#1D3539]">Product</a>
             <a href="#pricing" className="hover:text-[#1D3539]">Pricing</a>
             <a href="#faq" className="hover:text-[#1D3539]">FAQ</a>
           </nav>
-  
-          <button className="rounded-full bg-[#1D3539] px-6 py-3 text-sm font-semibold text-white transition hover:scale-105">
-            Join Waitlist
-          </button>
-  
+
+          <div className="flex items-center gap-3">
+            <a
+              href="https://snapopsai.com/login"
+              className="rounded-full px-5 py-3 text-sm font-semibold text-[#1D3539] transition hover:text-[#B48B5A]"
+            >
+              Sign In
+            </a>
+            <a
+              href="https://snapopsai.com/signup?src=nav"
+              className="rounded-full bg-[#1D3539] px-6 py-3 text-sm font-semibold text-white transition hover:scale-105"
+            >
+              Sign Up
+            </a>
+          </div>
+
         </div>
       </header>
     );
