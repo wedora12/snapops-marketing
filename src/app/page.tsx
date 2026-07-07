@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import Header from "@/components/navigation/Header";
 import Hero from "@/scenes/Scene01_Problem";
 import Scene02FlatlayDesk from "@/scenes/Scene02_FlatlayDesk";
 import Scene03OSReveal from "@/scenes/Scene03_OSReveal";
@@ -218,6 +219,7 @@ export default function Home() {
 
   return (
     <>
+    <Header />
     <main
       ref={mainRef}
       className={`w-full bg-[#F7F5F2] xl:h-screen xl:w-screen xl:overflow-hidden ${

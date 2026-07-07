@@ -27,13 +27,13 @@ export default function Header() {
 
           <div className="flex items-center gap-3">
             <a
-              href="https://snapopsai.com/login"
+              href="https://app.snapopsai.com/login"
               className="rounded-full px-5 py-3 text-sm font-semibold text-[#1D3539] transition hover:text-[#B48B5A]"
             >
               Sign In
             </a>
             <a
-              href="https://snapopsai.com/signup?src=nav"
+              href="https://app.snapopsai.com/signup?src=nav"
               className="rounded-full bg-[#1D3539] px-6 py-3 text-sm font-semibold text-white transition hover:scale-105"
             >
               Sign Up
