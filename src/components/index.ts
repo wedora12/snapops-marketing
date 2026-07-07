@@ -1,5 +1,3 @@
-export { default as LandingPage } from "@/components/LandingPage";
-
 export * from "@/components/backgrounds";
 export * from "@/components/buttons";
 export * from "@/components/cards";
