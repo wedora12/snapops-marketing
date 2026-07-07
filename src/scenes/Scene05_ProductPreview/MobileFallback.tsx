@@ -31,7 +31,7 @@ const items = [
 
 export default function Scene05MobileFallback() {
   return (
-    <section className="relative bg-[#F7F5F2] px-6 py-20 xl:hidden">
+    <section id="product-preview" className="relative bg-[#F7F5F2] px-6 py-20 xl:hidden">
       <div className="mx-auto max-w-[420px] text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#B48B5A]">
           SnapOps AI

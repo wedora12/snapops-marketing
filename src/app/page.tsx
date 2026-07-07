@@ -51,6 +51,11 @@ const LOCK_FLOOR_MS = 450;
 // existed to be yanked back from.
 const LOCK_SAFETY_CAP_MS = 11000;
 
+// The header floats fixed over the top of the viewport at all times (see
+// components/navigation/Header) — any scroll-to-anchor jump needs to stop
+// short of the very top of the target section, or the pill covers it.
+const HEADER_SCROLL_OFFSET = 140;
+
 export default function Home() {
   const [activeScene, setActiveScene] = useState(0);
   // Once Scene 5's closing beat fires `onRelease` (or the user manually
@@ -155,6 +160,82 @@ export default function Home() {
     };
   };
 
+  // Set by handlePricingNav when Pricing is clicked before the pin has ever
+  // been released (Section08_Pricing isn't mounted yet at that point) — the
+  // effect below fires the actual scroll once `pinReleased` flips true and
+  // the section exists in the DOM.
+  const pendingScrollIdRef = useRef<string | null>(null);
+
+  const isDesktopViewport = () =>
+    typeof window !== "undefined" && !window.matchMedia(MOBILE_BREAKPOINT_QUERY).matches;
+
+  const scrollToId = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - HEADER_SCROLL_OFFSET;
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+
+  // Jumps straight to one of the 5 pinned scenes from the header nav, from
+  // anywhere in the document (including after the pin has released and
+  // Sections 7-10 are showing below). Re-engages the pin so the cinematic
+  // sequence is reachable again, same as scrolling up at the top of the
+  // document already does (see handleWheel) — a nav click is just another
+  // way of asking to go back into that scene.
+  const goToPinnedScene = (scene: number) => {
+    if (pinReleasedRef.current) {
+      pinReleasedRef.current = false;
+      setPinReleased(false);
+    }
+    goToScene(scene, { force: true });
+    window.scrollTo({ top: 0 });
+  };
+
+  // "Why SnapOps" / the logo — return to Scene 1. Desktop uses the pinned
+  // mechanism; mobile has no pin to speak of (see the mount effect below),
+  // Scene 1 already always sits at the top of its normal document flow
+  // there, so this just scrolls up to it.
+  const handleHomeNav = () => {
+    if (isDesktopViewport()) {
+      goToPinnedScene(0);
+    } else {
+      scrollToId("problem");
+    }
+  };
+
+  // "Product" — Scene 5 (Scene05_ProductPreview) on desktop; its mobile
+  // fallback component (rendered unconditionally below) on mobile.
+  const handleProductNav = () => {
+    if (isDesktopViewport()) {
+      goToPinnedScene(4);
+    } else {
+      scrollToId("product-preview");
+    }
+  };
+
+  // "Pricing" — Section08_Pricing, which only mounts once `pinReleased` is
+  // true. If it isn't yet, release the pin first and let the effect below
+  // scroll once the section actually exists in the DOM.
+  const handlePricingNav = () => {
+    if (!pinReleasedRef.current) {
+      pendingScrollIdRef.current = "pricing";
+      pinReleasedRef.current = true;
+      setPinReleased(true);
+      return;
+    }
+    scrollToId("pricing");
+  };
+
+  useEffect(() => {
+    if (!pinReleased || !pendingScrollIdRef.current) return;
+    const id = pendingScrollIdRef.current;
+    pendingScrollIdRef.current = null;
+    // Section08_Pricing has just been conditionally mounted this render —
+    // wait a frame so it's actually in the DOM (and laid out) before
+    // measuring its position to scroll to.
+    requestAnimationFrame(() => scrollToId(id));
+  }, [pinReleased]);
+
   // Below the mobile breakpoint there's no wheel-lock experience at all
   // (see the responsive classes on `main` and the scene wrappers below) —
   // release immediately on mount so Sections 7-9 mount unconditionally and
@@ -219,7 +300,11 @@ export default function Home() {
 
   return (
     <>
-    <Header />
+    <Header
+      onHomeClick={handleHomeNav}
+      onProductClick={handleProductNav}
+      onPricingClick={handlePricingNav}
+    />
     <main
       ref={mainRef}
       className={`w-full bg-[#F7F5F2] xl:h-screen xl:w-screen xl:overflow-hidden ${
