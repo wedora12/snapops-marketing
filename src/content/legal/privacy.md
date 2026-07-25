@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: [DATE]**
+**Last updated: July 25, 2026**
 
 This Privacy Policy explains how Nuptial Diaries, a proprietorship registered in India ("SnapOps," "we," "us," "our") collects, uses, and protects information when you use SnapOps AI (the "Service").
 
