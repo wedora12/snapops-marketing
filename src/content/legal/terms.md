@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last updated: [DATE]**
+**Last updated: July 25, 2026**
 
 These Terms of Service ("Terms") govern your access to and use of SnapOps AI (the "Service"), operated by Nuptial Diaries, a proprietorship registered in India ("SnapOps," "we," "us," or "our"), with its registered office at 4th Floor, No 1/1, 5th Cross Rd, near Seetha Circle, 1st Phase Girinagar, Nagendra Block, Banashankari 1st Stage, Banashankari, Bengaluru, Karnataka 560085.
 
@@ -19,16 +19,16 @@ You must be at least 18 years old and capable of entering into a binding contrac
 - We reserve the right to suspend or terminate accounts that violate these Terms.
 
 ## 4. Subscription Plans and Payment
-- SnapOps offers subscription plans as described at [PRICING PAGE URL] at the time of purchase.
+- SnapOps offers subscription plans as described on our [Pricing page](https://snapopsai.com/#pricing) at the time of purchase.
 - Subscription fees are billed monthly or annually, depending on the plan you select, in advance via our payment processor, Razorpay.
-- Prices are subject to change with [NUMBER] days' notice to existing subscribers.
+- Prices are subject to change with 30 days' notice to existing subscribers.
 - Failure to pay may result in suspension or downgrade of your account.
 - See our separate Refund Policy for cancellation and refund terms.
 
 ## 5. Your Data and Client Data
 - You retain ownership of all data you upload to the Service, including client information, project details, photographs, and financial records ("Customer Data").
 - You are solely responsible for ensuring you have the necessary rights and consents from your own clients to store their personal data (including photographs) within SnapOps.
-- We act as a data processor with respect to Customer Data you upload; you act as the data controller. [This allocation should be confirmed with a lawyer, particularly in light of India's Digital Personal Data Protection Act, 2023.]
+- We act as a data processor with respect to Customer Data you upload; you act as the data controller.
 - We will not access, use, or disclose Customer Data except as necessary to provide the Service, or as required by law.
 
 ## 6. Acceptable Use
@@ -50,21 +50,18 @@ The Service may integrate with third-party tools (e.g., payment processors, comm
 We aim to keep the Service available at all times but do not guarantee uninterrupted access. We may perform maintenance, and the Service may occasionally be unavailable.
 
 ## 10. Limitation of Liability
-[This section requires careful legal drafting specific to your risk profile — do not rely on this placeholder language.] To the maximum extent permitted by law, SnapOps shall not be liable for indirect, incidental, or consequential damages arising from your use of the Service. Our total liability shall not exceed the amount you paid us in the [12 months] preceding the claim.
+To the maximum extent permitted by law, SnapOps shall not be liable for indirect, incidental, or consequential damages arising from your use of the Service. Our total liability shall not exceed the amount you paid us in the 12 months preceding the claim.
 
 ## 11. Termination
 - You may cancel your subscription at any time through your account settings or by contacting help@snapopsai.com.
 - We may suspend or terminate your account for violation of these Terms.
-- Upon termination, you may lose access to your data after [RETENTION PERIOD — specify, e.g. 30 days], during which you may export your data.
+- Upon termination, you may lose access to your data after 30 days, during which you may export your data.
 
 ## 12. Governing Law and Dispute Resolution
-These Terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Bangalore, Karnataka, India. [Consider whether arbitration is preferable — discuss with your lawyer.]
+These Terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Bangalore, Karnataka, India.
 
 ## 13. Changes to These Terms
-We may update these Terms from time to time. We will notify you of material changes via [email/in-app notice]. Continued use of the Service after changes constitutes acceptance.
+We may update these Terms from time to time. We will notify you of material changes via email and/or an in-app notice. Continued use of the Service after changes constitutes acceptance.
 
 ## 14. Contact
 For questions about these Terms, contact us at help@snapopsai.com or 4th Floor, No 1/1, 5th Cross Rd, near Seetha Circle, 1st Phase Girinagar, Nagendra Block, Banashankari 1st Stage, Banashankari, Bengaluru, Karnataka 560085.
-
----
-**Reminder: this is a first-pass draft only. Have a lawyer review before publishing, particularly sections 5, 10, and 12, which carry real legal and financial risk if drafted incorrectly.**

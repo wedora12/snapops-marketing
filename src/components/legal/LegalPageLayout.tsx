@@ -3,7 +3,6 @@ import Markdown from "react-markdown";
 import type { Components } from "react-markdown";
 
 import Section10Footer from "@/sections/Section10_Footer";
-import DraftBanner from "@/components/legal/DraftBanner";
 
 const markdownComponents: Components = {
   h1: ({ children }) => (
@@ -54,7 +53,6 @@ export default function LegalPageLayout({ markdown }: { markdown: string }) {
           </Link>
 
           <div className="mt-8">
-            <DraftBanner />
             <Markdown components={markdownComponents}>{markdown}</Markdown>
           </div>
         </div>

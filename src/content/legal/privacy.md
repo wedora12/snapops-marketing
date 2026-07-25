@@ -68,13 +68,9 @@ Your data, and any Customer Data you upload, is processed and stored in the Unit
 
 Emergent has confirmed they are ISO certified and have completed SOC 2 Type I (SOC 2 Type II in progress); they are not currently GDPR or CCPA certified. Emergent does not currently offer region selection (e.g. India-hosted data) outside their Enterprise plan, which is not self-serve.
 
-[This section requires lawyer review specifically: confirm what disclosures and/or consent mechanisms are required under the DPDP Act for routine cross-border transfer to a US-based processor without a Data Processing Agreement currently in place, and whether this arrangement is adequate for SnapOps' current compliance posture.]
-
 ## 12. Changes to This Policy
 We may update this Privacy Policy from time to time. We will notify you of material changes via [email/in-app notice].
 
 ## 13. Contact Us
 For privacy-related questions or requests, contact help@snapopsai.com or 4th Floor, No 1/1, 5th Cross Rd, near Seetha Circle, 1st Phase Girinagar, Nagendra Block, Banashankari 1st Stage, Banashankari, Bengaluru, Karnataka 560085.
 
----
-**Reminder: this is a first-pass draft only. Sections 5 (data storage location) and 9 (cookies/analytics) are now confirmed and no longer placeholders. Section 11 (international data transfers) is fully written but still needs a lawyer's specific sign-off on whether routine cross-border transfer to a US processor without a DPA in place is adequate — do not treat this document as fully final until that's resolved. Remaining open items: sections 3 and 6, and the retention period and notice method placeholders throughout.**
