@@ -37,7 +37,7 @@ We may share information with:
 We do not share Customer Data you've uploaded with third parties except as necessary to operate the Service (e.g., cloud hosting) or as legally required.
 
 ## 5. Data Storage and Security
-- Data is stored on [HOSTING PROVIDER/REGION — STILL UNKNOWN, confirm with your technical team/Emergent platform documentation which country/region actually hosts the database; this matters for DPDP Act cross-border transfer rules and must be resolved before publishing].
+- Data is stored via our hosting platform (Emergent). Per written confirmation from Emergent: our production database (MongoDB), object/file storage, and application logs are all hosted in the United States (database region: us-central1), encrypted at rest. Backups are retained in the same US region (not cross-region replicated), encrypted at rest with AES-256. Static frontend assets are served via Cloudflare's global CDN edge network (specific edge locations not published by Cloudflare).
 - We implement reasonable technical and organizational measures to protect data, including [encryption in transit/at rest, access controls — specify what's actually true].
 - No system is completely secure; we cannot guarantee absolute security.
 
@@ -58,13 +58,17 @@ To exercise these rights, contact us at help@snapopsai.com.
 If you upload personal data about your own clients (e.g., wedding couples) into SnapOps, **you** are responsible for ensuring you have appropriate consent and legal basis to do so under applicable law. We process this data solely on your instructions, as your data processor.
 
 ## 9. Cookies and Tracking
-[UNCONFIRMED — you weren't sure whether Mixpanel or similar analytics tools are currently active on the SnapOps CRM product itself; check with your technical team before publishing, since this section must accurately list whatever's actually running.] We use cookies and similar technologies to operate the Service and understand usage patterns. You can control cookies through your browser settings.
+We do not use analytics tools, tracking cookies, or similar technologies beyond what's strictly necessary for the Service to function (e.g., session/authentication cookies required to keep you logged in). We do not track your usage patterns for marketing or analytics purposes.
 
 ## 10. Children's Privacy
 The Service is not directed at individuals under 18. We do not knowingly collect personal information from minors.
 
 ## 11. International Data Transfers
-[Only include/adjust if actually applicable.] If data is transferred outside India, we take steps to ensure it receives an adequate level of protection.
+Your data, and any Customer Data you upload, is processed and stored in the United States via our hosting platform (Emergent), even though SnapOps and its users are based in India. This means your data is transferred outside India in the ordinary course of providing the Service.
+
+Emergent has confirmed they are ISO certified and have completed SOC 2 Type I (SOC 2 Type II in progress); they are not currently GDPR or CCPA certified. Emergent does not currently offer region selection (e.g. India-hosted data) outside their Enterprise plan, which is not self-serve.
+
+[This section requires lawyer review specifically: confirm what disclosures and/or consent mechanisms are required under the DPDP Act for routine cross-border transfer to a US-based processor without a Data Processing Agreement currently in place, and whether this arrangement is adequate for SnapOps' current compliance posture.]
 
 ## 12. Changes to This Policy
 We may update this Privacy Policy from time to time. We will notify you of material changes via [email/in-app notice].
@@ -73,4 +77,4 @@ We may update this Privacy Policy from time to time. We will notify you of mater
 For privacy-related questions or requests, contact help@snapopsai.com or 4th Floor, No 1/1, 5th Cross Rd, near Seetha Circle, 1st Phase Girinagar, Nagendra Block, Banashankari 1st Stage, Banashankari, Bengaluru, Karnataka 560085.
 
 ---
-**Reminder: this is a first-pass draft only. Have a lawyer review before publishing — particularly sections 3, 7, and 11, and confirm accuracy of sections 5 and 9 against what SnapOps actually does technically.**
+**Reminder: this is a first-pass draft only. Sections 5 (data storage location) and 9 (cookies/analytics) are now confirmed and no longer placeholders. Section 11 (international data transfers) is fully written but still needs a lawyer's specific sign-off on whether routine cross-border transfer to a US processor without a DPA in place is adequate — do not treat this document as fully final until that's resolved. Remaining open items: sections 3 and 6, and the retention period and notice method placeholders throughout.**
